@@ -1,0 +1,27 @@
+{
+  "name": "apigw-lambda-cognito",
+  "version": "1.0.0",
+  "description": "Node.js CRUD Lambda function with API Gateway and Cognito authorization",
+  "main": "src/handlers/products.js",
+  "scripts": {
+    "start": "node local-server.js"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "api-gateway",
+    "cognito",
+    "dynamodb",
+    "nodejs",
+    "crud"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.609.0",
+    "@aws-sdk/lib-dynamodb": "^3.609.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
