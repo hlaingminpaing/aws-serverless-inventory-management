@@ -14,6 +14,16 @@ This directory contains the Vite-based React Single Page Application (SPA) for t
 
 ---
 
+## 🔐 AWS Cognito Setup Requirements
+
+When creating your Amazon Cognito User Pool for this application, ensure you configure the following options in the setup wizard so it matches the frontend authentication flow:
+
+* **Configure options > Options for sign-in identifiers**: Check both **Email** and **Username**. This allows the Authenticator component to process both types of logins.
+* **Configure options > Self-registration**: Check **Enable self-registration** so users can sign up.
+* **Configure options > Required attributes for sign-up**: Select **email** and **name**. The `name` attribute is strictly required by the frontend `<Authenticator signUpAttributes={["name"]}>` component.
+
+---
+
 ## 💻 Local Quickstart
 
 ### 1. Install Dependencies

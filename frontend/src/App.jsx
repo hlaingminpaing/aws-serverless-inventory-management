@@ -380,7 +380,7 @@ export default function App({ isCognitoEnabled }) {
   // Main wrapper with Authenticator overlay conditional logic
   if (isCognitoEnabled) {
     return (
-      <Authenticator signUpAttributes={["name"]}>
+      <Authenticator signUpAttributes={["email", "name"]}>
         {({ signOut, user }) => renderDashboard(signOut, user)}
       </Authenticator>
     );
