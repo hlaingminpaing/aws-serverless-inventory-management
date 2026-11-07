@@ -88,6 +88,30 @@ Since you are deploying directly via the AWS Console, here is the sequence of ac
 6. **Define stages**: Keep stage name as `$default` (this enables auto-deploy on saving). Click **Next**.
 7. Click **Create**. Copy the **Invoke URL** (e.g. `https://xxxxxx.execute-api.ap-southeast-1.amazonaws.com`).
 
+
+### Postman API Testing Guide
+
+
+
+| Method | Endpoint |
+|---|---|
+| GET | `https://xxxx.execute-api.ap-southeast-1.amazonaws.com/products` |
+| GET | `https://xxxx.execute-api.ap-southeast-1.amazonaws.com/products/PROD001` |
+| POST | `https://xxxx.execute-api.ap-southeast-1.amazonaws.com/products` |
+| PUT | `https://xxxx.execute-api.ap-southeast-1.amazonaws.com/products/PROD001` |
+| DELETE | `https://xxxx.execute-api.ap-southeast-1.amazonaws.com/products/PROD001` |
+
+In Postman, select Body → raw → JSON.
+```sh
+{
+  "id": "PROD001",
+  "name": "MacBook Pro M4",
+  "price": 1999,
+  "description": "Apple MacBook Pro",
+  "category": "Electronics"
+}
+```
+
 ---
 
 ### Step 4: Secure Write Routes with Cognito Authorizer
